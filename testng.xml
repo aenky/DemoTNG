@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parallel test suite" parallel="methods" thread-count="1">
+    <test name="Regression 1">
+        <classes>
+            <class name="test.java.Tests.Test">
+                <methods>
+                    <include name="loginwithIdPassword"/>
+                </methods>
+            </class>
+            <class name="test.java.Tests.Test">
+                <methods>
+                    <include name="verifyNopCommerceNewsSection"/>
+                </methods>
+            </class>
+
+        </classes>
+
+    </test>
+</suite>
